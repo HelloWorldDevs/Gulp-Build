@@ -4,7 +4,8 @@ const gulp = require('gulp'),
       useref = require('gulp-useref'),
       uglify = require('gulp-uglify'),
       gulpIf = require('gulp-if'),
-      cssnano = require('gulp-cssnano');
+      cssnano = require('gulp-cssnano'),
+      imagemin = require('gul-imagemin');
 
 gulp.task('browserSync', function() {
    browserSync.init({
@@ -34,9 +35,18 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('imagemin', function() {
+    return gulp.src('site/images/**/*.+(png|jpg|gif|svg|jpeg)')
+        .pipe(imagemin({
+            interlaced: true
+        }))
+        .pipe(gulp.dest('site/images'));
+});
+
 
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
     gulp.watch('site/scss/**/*.+(scss|sass)', ['sass']);
+    gulp.watch('site/images/**/*.+(png|jpg|gif|svg|jpeg)', ['imagemin']);
     gulp.watch('site/*.html', browserSync.reload);
     gulp.watch('site/js/**/*.js', browserSync.reload);
 });
