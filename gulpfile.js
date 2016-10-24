@@ -1,7 +1,9 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       browserSync = require('browser-sync'),
-      useref = require('gulp-useref');
+      useref = require('gulp-useref'),
+      uglify = require('gulp-uglify'),
+      gulpIf = require('gulp-if');
 
 gulp.task('browserSync', function() {
    browserSync.init({
@@ -23,6 +25,8 @@ gulp.task('sass', function(){
 gulp.task('useref', function() {
     return gulp.src('site/*.html')
         .pipe(useref())
+        // Minifies only if a JS file
+        .pipe(gulpIf('*.js', uglify()))
         .pipe(gulp.dest('dist'));
 });
 
