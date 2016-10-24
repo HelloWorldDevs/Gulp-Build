@@ -3,7 +3,8 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync'),
       useref = require('gulp-useref'),
       uglify = require('gulp-uglify'),
-      gulpIf = require('gulp-if');
+      gulpIf = require('gulp-if'),
+      cssnano = require('gulp-cssnano');
 
 gulp.task('browserSync', function() {
    browserSync.init({
@@ -24,11 +25,15 @@ gulp.task('sass', function(){
 
 gulp.task('useref', function() {
     return gulp.src('site/*.html')
+        // Concats JS files - No need to concat CSS files
         .pipe(useref())
         // Minifies only if a JS file
         .pipe(gulpIf('*.js', uglify()))
+        //Minifies only if a CSS file
+        .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'));
 });
+
 
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
     gulp.watch('site/scss/**/*.+(scss|sass)', ['sass']);
