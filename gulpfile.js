@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
-      browserSync = require('browser-sync');
+      browserSync = require('browser-sync'),
+      useref = require('gulp-useref');
 
 gulp.task('browserSync', function() {
    browserSync.init({
@@ -11,14 +12,22 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function(){
-   return gulp.src('site/scss/**/*.+(scss|sass)')
-       .pipe(sass())                                     // Converts scss to css
+   return gulp.src('site/scss/main.scss')
+       .pipe(sass().on('error', sass.logError))                                     // Converts scss to css
        .pipe(gulp.dest('site/css'))
        .pipe(browserSync.reload({
           stream: true
        }));
 });
 
+gulp.task('useref', function() {
+    return gulp.src('site/*.html')
+        .pipe(useref())
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
-   return gulp.watch('site/scss/**/*.+(scss|sass)', ['sass']);
+    gulp.watch('site/scss/**/*.+(scss|sass)', ['sass']);
+    gulp.watch('site/*.html', browserSync.reload);
+    gulp.watch('site/js/**/*.js', browserSync.reload);
 });
