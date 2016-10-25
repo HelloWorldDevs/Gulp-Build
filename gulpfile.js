@@ -5,7 +5,8 @@ const gulp = require('gulp'),
       uglify = require('gulp-uglify'),
       gulpIf = require('gulp-if'),
       cssnano = require('gulp-cssnano'),
-      imagemin = require('gul-imagemin');
+      imagemin = require('gulp-imagemin'),
+      cache = require('gulp-cache');
 
 gulp.task('browserSync', function() {
    browserSync.init({
@@ -17,7 +18,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function(){
    return gulp.src('site/scss/main.scss')
-       .pipe(sass().on('error', sass.logError))                                     // Converts scss to css
+       .pipe(sass())                                     // Converts scss to css
        .pipe(gulp.dest('site/css'))
        .pipe(browserSync.reload({
           stream: true
@@ -35,14 +36,17 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('imagemin', function() {
-    return gulp.src('site/images/**/*.+(png|jpg|gif|svg|jpeg)')
-        .pipe(imagemin({
+gulp.task('imagemin', function() {            // Compresses all images.
+    return gulp.src('site/images/**/*.+(jpeg|jpg|png|gif|svg)')
+        .pipe(cache(imagemin({
             interlaced: true
-        }))
+        })))
         .pipe(gulp.dest('site/images'));
 });
 
+gulp.task('fonts', function() {
+    gulp.src('site/fonts/**/*')
+})
 
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
     gulp.watch('site/scss/**/*.+(scss|sass)', ['sass']);
