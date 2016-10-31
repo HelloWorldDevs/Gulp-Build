@@ -10,7 +10,8 @@ const gulp = require('gulp'),
       del = require('del'),
       runSequence = require('run-sequence'),
       inject = require('gulp-inject-string'),
-      spritesmith = require('gulp.spritesmith');
+      spritesmith = require('gulp.spritesmith'),
+      merge = require('merge-stream');
 
 /********* Snippets ***********/
 const snippets = {
@@ -19,7 +20,7 @@ const snippets = {
 }
 
 /******* Tasks **********/
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function() { // Initiate BrowserSync
    browserSync.init({
       server: {
          baseDir: 'site'
@@ -28,8 +29,8 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function(){
-   return gulp.src('site/scss/main.scss')
-       .pipe(sass())                                     // Converts scss to css
+   return gulp.src('site/scss/main.scss')   // Converts main.scss to css file for dev process
+       .pipe(sass())
        .pipe(gulp.dest('site/css'))
        .pipe(browserSync.reload({
           stream: true
@@ -49,22 +50,22 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('images', function() {            // Compresses all images.
-    return gulp.src('site/images/**/*.+(jpeg|jpg|png|gif|svg)')
+gulp.task('images', function() {        // Compresses all images except PNG's.
+    gulp.src('site/images/**/*.+(jpeg|jpg|gif|svg)')
         .pipe(cache(imagemin({
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/images'));    // Moves all images except for PNG's                                                                  // PNG's will be compressed during Sprite Process
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', function() { // Moves all font files over to dist
     gulp.src('site/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
     return gulp.src('site/css/fonts/**/*')
         .pipe(gulp.dest('dist/css/fonts'));
 });
 
-gulp.task('clean:dist', function() {
+gulp.task('clean:dist', function() { // Completely deletes dist folder
     return del.sync('dist');
 });
 
@@ -75,27 +76,36 @@ gulp.task('cache:clear', function(callback) { // Clears cache of project
 
 
 gulp.task('sprite', function () {
-    var spriteData = gulp.src('site/images/**/*.png').pipe(spritesmith({
+    gulp.src('site/images/*.+(png)')      // Compress all PNG files
+        .pipe(cache(imagemin({
+            interlaced: true
+        })))
+        .pipe(gulp.dest('site/images'));
+    // Generate our spritesheet for png files
+    var spriteData = gulp.src('site/images/*.png').pipe(spritesmith({
         imgName: 'sprite.png',
-        cssName: 'sprite.css'
+        cssName: 'sprite.scss'
     }));
-    spriteData.css.pipe(gulp.dest('site/scss'));
-    spriteData.img.pipe(gulp.dest('site/images'));
+    var imgStream = spriteData.img
+        .pipe(gulp.dest('site/images/sprite'), ('dist/images/sprite'))
+        .pipe(gulp.dest('dist/images/sprite')); // Destination for sprite PNG
+    var cssStream = spriteData.css
+        .pipe(gulp.dest('site/dependencies/scss')); // Destination for sprite.scss
 });
 
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
     gulp.watch('site/scss/**/*.+(scss|sass)', ['sass']);
-    gulp.watch('site/images/**/*.+(png|jpg|gif|svg|jpeg)', ['images']);
+    gulp.watch('site/images/**/*.+(jpg|gif|svg|jpeg)', ['images']);
     gulp.watch('site/*.html', browserSync.reload);
     gulp.watch('site/js/**/*.js', browserSync.reload);
+    gulp.watch('site/images/*.png', ['sprite']);
 });
 
 gulp.task('build', function (callback) {
-    runSequence('clean:dist', 'sass', ['useref', 'images', 'fonts'],
+    runSequence('clean:dist', 'sass', ['useref', 'images', 'sprite', 'fonts'],
         callback
     );
 });
-
 
 gulp.task('default', function (callback) {
     runSequence(['sass','browserSync', 'watch'],

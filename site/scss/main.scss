@@ -6,7 +6,7 @@
 @import "dependencies/font-icons.scss";
 @import "dependencies/animate.scss";
 @import "dependencies/responsive.scss";
-
+@import "sprite.scss";
 // End Canvas Dependencies //
 
 
@@ -32,4 +32,8 @@
 .box {
   border:1px solid #000;
   color:blueasdfadsf
+}
+
+.hi-2 {
+  background:$sprite-x;
 }

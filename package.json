@@ -1,7 +1,6 @@
 {
   "name": "gulp-final",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +19,9 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
+    "gulp.spritesmith": "^6.2.1",
+    "merge-stream": "^1.0.0",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "description": ""
 }

@@ -16,21 +16,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-kinard-logo {
+.icon-kirkpatrick-logo-dark {
   background-image: url(sprite.png);
-  background-position: -1234px 0px;
-  width: 576px;
-  height: 576px;
-}
-.icon-leaf-graphic {
-  background-image: url(sprite.png);
-  background-position: -1234px -576px;
-  width: 82px;
-  height: 100px;
+  background-position: -900px 0px;
+  width: 900px;
+  height: 323px;
 }
 .icon-sprite {
   background-image: url(sprite.png);
   background-position: 0px 0px;
-  width: 1234px;
-  height: 676px;
+  width: 900px;
+  height: 646px;
 }
