@@ -11,13 +11,21 @@ const gulp = require('gulp'),
       runSequence = require('run-sequence'),
       inject = require('gulp-inject-string'),
       spritesmith = require('gulp.spritesmith'),
-      merge = require('merge-stream');
+      merge = require('merge-stream'),
+      htmlhint = require('gulp-htmlhint'),
+      prompt = require('gulp-prompt'),
+      rename = require('gulp-rename');
+
+
 
 /********* Snippets ***********/
+
 const snippets = {
-    scriptTag: "<!--============================ Scripts ============================-->\n\t",
-    cssTag: "<!--============================ CSS ============================-->\n\t",
+    scriptTag: "<!-- Scripts -->\n\t",
+    cssTag: "<!-- CSS -->\n\t",
+    index: "test"
 }
+
 
 /******* Tasks **********/
 gulp.task('browserSync', function() { // Initiate BrowserSync
@@ -101,14 +109,46 @@ gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both b
     gulp.watch('site/images/*.png', ['sprite']);
 });
 
+gulp.task('valid', function () {
+    gulp.src('site/index.html')
+        .pipe(htmlhint())
+        .pipe(htmlhint.reporter());
+});
+
+gulp.task('start', function() {
+    gulp.src('site/index.html')
+        .pipe(prompt.prompt({
+            type: 'input',
+            name: 'answer',
+            message: 'Do you want to start a new project?',
+            validate: function(answer){
+                if(answer === 'yes'){
+                    del.sync('site/index.html');
+                    console.log('\nBuilding new project...');
+
+                    gulp.src('template-index.html')
+                        .pipe(rename('index.html'))
+                        .pipe(gulp.dest('site/'));
+                } else if (answer === 'no') {
+                    console.log('\nA new project was not created.');
+                }
+            }
+        }, function(res){
+            //value is in res.pass
+        }));
+});
+
+
 gulp.task('build', function (callback) {
-    runSequence('clean:dist', 'sass', ['useref', 'images', 'sprite', 'fonts'],
+    runSequence('clean:dist', 'sass', ['valid', 'useref', 'images', 'sprite', 'fonts'],
         callback
     );
 });
 
 gulp.task('default', function (callback) {
-    runSequence(['sass','browserSync', 'watch'],
+    runSequence(['sass', 'valid', 'browserSync', 'watch'],
         callback
     );
 });
+
+
