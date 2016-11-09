@@ -13,8 +13,8 @@ const gulp = require('gulp'),
       spritesmith = require('gulp.spritesmith'),
       merge = require('merge-stream'),
       htmlhint = require('gulp-htmlhint'),
-      prompt = require('gulp-prompt'),
-      rename = require('gulp-rename');
+      rename = require('gulp-rename'),
+      prompt = require('prompt');
 
 
 
@@ -116,26 +116,58 @@ gulp.task('valid', function () {
 });
 
 gulp.task('start', function() {
-    gulp.src('site/index.html')
-        .pipe(prompt.prompt({
-            type: 'input',
-            name: 'answer',
-            message: 'Do you want to start a new project?',
-            validate: function(answer){
-                if(answer === 'yes'){
-                    del.sync('site/index.html');
-                    console.log('\nBuilding new project...');
-
-                    gulp.src('template-index.html')
-                        .pipe(rename('index.html'))
-                        .pipe(gulp.dest('site/'));
-                } else if (answer === 'no') {
-                    console.log('\nA new project was not created.');
-                }
+    // New project prompt
+    var new_project = {
+        properties: {
+            name: {
+                message: 'Do you want to start a new project? This will delete current project. Type "yes" to continue',
+                required: true
+            },
+        }
+    };
+    var meta_information = {
+        properties: {
+            description: {
+                message: 'Please enter meta description',
+                required:true
+            },
+            keywords: {
+                message: 'Please enter meta keywords',
+                required: true
+            },
+            title: {
+                message: 'Please enter site title',
+                required: true
             }
-        }, function(res){
-            //value is in res.pass
-        }));
+        }
+    };
+
+    // Start the build new project prompt
+    prompt.start();
+    prompt.get(new_project, function (err, result) {
+        if(result.name === 'yes') {
+            del.sync('site/index.html');
+            console.log('\nBuilding new project... \nPlease answer the following questions.');
+            gulp.src('templates/template-index.html')
+                .pipe(rename('index.html'))
+                .pipe(gulp.dest('site/'));
+            del.sync('site/js/custom.js');
+            gulp.src('templates/template-custom.js')
+                .pipe(rename('custom.js'))
+                .pipe(gulp.dest('site/js/'));
+            prompt.get(meta_information, function(err, result) {
+                gulp.src('site/index.html')
+                    .pipe(inject.after('<meta name="description" content="', result.description))
+                    .pipe(inject.after('<meta name="keywords" content="', result.keywords))
+                    .pipe(inject.after('<title>', result.title))
+                    .pipe(gulp.dest('site'));
+
+            });
+        } else {
+            return console.log('\nA new project was not created.');
+        }
+    });
+
 });
 
 
