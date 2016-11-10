@@ -14,7 +14,8 @@ const gulp = require('gulp'),
       merge = require('merge-stream'),
       htmlhint = require('gulp-htmlhint'),
       rename = require('gulp-rename'),
-      prompt = require('prompt');
+      prompt = require('prompt'),
+      fs = require('fs');
 
 
 
@@ -125,6 +126,8 @@ gulp.task('start', function() {
             },
         }
     };
+
+    // Meta Information
     var meta_information = {
         properties: {
             description: {
@@ -141,6 +144,24 @@ gulp.task('start', function() {
             }
         }
     };
+
+    // Navbar type, location and side-panel
+    var site_build = {
+        properties: {
+            navbar_location: {
+                message: 'Is the navbar "above" or "below" the slider?',
+                required:true
+            },
+            navbar_side_panel: {
+                message: 'Does the navbar have a side panel?',
+                required: true
+            },
+            navbar_type: {
+                message: 'Is the navbar "split", "logo-left", or "logo-right"?',
+                required: true
+            }
+        }
+    }
 
     // Start the build new project prompt
     prompt.start();
@@ -161,13 +182,65 @@ gulp.task('start', function() {
                     .pipe(inject.after('<meta name="keywords" content="', result.keywords))
                     .pipe(inject.after('<title>', result.title))
                     .pipe(gulp.dest('site'));
-
+                prompt.get(site_build, function(err, result) {
+                    var logo_left = fs.readFileSync("templates/template-nav-logo-left.html", "utf8");
+                    var logo_right = fs.readFileSync('templates/template-nav-logo-right.html', "utf8");
+                    var split = fs.readFileSync('templates/template-nav-split.html', "utf8");
+                    var slider = fs.readFileSync('templates/template-top-slider.html', "utf8");
+                    if (result.navbar_location === 'above') {
+                        if (result.navbar_type === 'logo-left') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + logo_left))
+                                .pipe(inject.before('<!-- Content -->', slider + '\n\n'))
+                                .pipe(gulp.dest('site'));
+                        } else if (result.navbar_type === 'logo-right') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + logo_right))
+                                .pipe(inject.before('<!-- Content -->', slider + '\n\n'))
+                                .pipe(gulp.dest('site'));
+                        } else if (result.navbar_type === 'split') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + split))
+                                .pipe(inject.before('<!-- Content -->', slider + '\n\n'))
+                                .pipe(gulp.dest('site'));
+                        }
+                        else {
+                            console.log('Not a valid navbar type. Please insert your own from templates.');
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
+                                .pipe(gulp.dest('site'));
+                        }
+                    } else if (result.navbar_location === 'below') {
+                        if (result.navbar_type === 'logo-left') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
+                                .pipe(inject.before('<!-- Content -->', logo_left + '\n\n'))
+                                .pipe(gulp.dest('site'));
+                        } else if (result.navbar_type === 'logo-right') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
+                                .pipe(inject.before('<!-- Content -->', logo_right + '\n\n'))
+                                .pipe(gulp.dest('site'));
+                        } else if (result.navbar_type === 'split') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
+                                .pipe(inject.before('<!-- Content -->', split +'\n\n'))
+                                .pipe(gulp.dest('site'));
+                        } else {
+                            console.log('Not a valid navbar type. Please insert your own from templates.');
+                        }
+                    } else {
+                        console.log('You didn\'t type in a valid navbar type. Please insert your own from templates');
+                        gulp.src('site/index.html')
+                            .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
+                            .pipe(gulp.dest('site'));
+                    }
+                });
             });
         } else {
             return console.log('\nA new project was not created.');
         }
     });
-
 });
 
 
