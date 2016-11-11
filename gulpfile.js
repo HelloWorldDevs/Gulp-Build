@@ -59,12 +59,12 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('images', function() {        // Compresses all images except PNG's.
-    gulp.src('site/images/**/*.+(jpeg|jpg|gif|svg)')
+gulp.task('images', function() {        // Compresses all images.
+    gulp.src('site/images/**/*.+(jpeg|jpg|gif|svg|png)')
         .pipe(cache(imagemin({
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'));    // Moves all images except for PNG's                                                                  // PNG's will be compressed during Sprite Process
+        .pipe(gulp.dest('dist/images'));    // Moves all images to distribution.
 });
 
 gulp.task('fonts', function() { // Moves all font files over to dist
