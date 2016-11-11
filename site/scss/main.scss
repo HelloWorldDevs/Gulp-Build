@@ -9,12 +9,21 @@
 @import "dependencies/navbar.scss";
 @import "dependencies/footer.scss";
 @import "dependencies/phone-slug.scss";
+@import "dependencies/contact-modal.scss";
+
 
 // End Canvas Dependencies //
+
+
+// Variables to define first //
 
 $primary-font: 'Lato', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
 $third-font: 'Roboto Condensed', sans-serif;
+$button-color: orange;
+$button-hover:gray;
+
+// CSS //
 
 body {
   font-family:$primary-font;
@@ -49,8 +58,11 @@ p {
 }
 
 .button {
-  background:orange;
+  background:$button-color;
   padding-top:2px;
+}
+.button:hover {
+  background:$button-hover
 }
 .content-wrap {
   padding:0;

@@ -285,6 +285,86 @@
 
 </div>
 
+<!-- Contact Modal
+============================================= -->
+
+
+<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Request an Appointment</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-error"></div>
+            <form id="mail-form" method="post" action="//web-api.tysonsteele.com/v1/webprops/KEY/schedule">
+                <h5>YES! Please contact me to schedule an appointment or answer any questions I&nbsp;might&nbsp;still&nbsp;have:</h5>
+                <div class="row appointment_input_row form-group">
+                    <div class="col-xs-4">
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="text" name="name" id="name" class="form-control appointment_form">
+                    </div>
+                </div>
+                <div class="row appointment_input_row form-group">
+                    <div class="col-xs-4">
+                        <label for="confirmed_email">Email:</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="email" name="confirmed_email" id="confirmed_email"
+                               class="form-control appointment_form">
+                    </div>
+                </div>
+                <div class="row appointment_input_row form-group">
+                    <div class="col-xs-4">
+                        <label for="phone">Phone:</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <input type="text" name="phone" id="phone" class="form-control appointment_form">
+                    </div>
+                </div>
+                <button type="submit" class="btn button custom-btn">Request Appointment</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Services Modals -->
+
+<div class="modal fade service-modal" id="orthodontics" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Orthodontics</h4>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap hidden-xs hidden-sm">
+                <img src="images/services/orthodontics.jpg" alt="Orthodontics">
+            </div>
+            <div class="service-modal-text">
+                <p>A beautifully-aligned natural smile can be obtained both with traditional metal braces and other more subtle options like ClearCorrect “invisible” orthodontics. ClearCorrect “invisible” aligners are the latest in orthodontic technology for adults and teens. Straight teeth and a revitalized smile no longer need to come from a mouth full of wire and bracket braces.</p>
+
+                <p>Get the smile you’ve always wanted with traditional and ClearCorrect orthodontics! Call us today for a orthodontic consultation.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS Templates
+		====================== -->
+
+<!--- Specials Script
+        =================== -->
+<script type="text/template" id="success_msg">
+    <p>Congratulations! Dentistry is a big part of a healthy life, and we're excited to be a part of yours. We will
+        contact you in the next 2 business days to schedule your appointment and to answer any questions you may still have.
+        Thank you!</p>
+</script>
+
 <!--[if lt IE 9]>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
