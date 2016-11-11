@@ -11778,10 +11778,9 @@ body:not(.device-xs):not(.device-xxs) .countdown.countdown-large.coming-soon .co
   line-height: 40px;
   color: #FFF;
   font-weight: 400;
-  border: 1px solid #FFF;
   padding-top: 4px;
-  padding-left: 85px;
-  padding-right: 85px;
+  padding-left: 45px;
+  padding-right: 45px;
   font-size: 20px;
   background: #8E0BD6;
   border: 2px solid #FFFFFF;
@@ -25807,24 +25806,94 @@ a.social-icon.si-colored {
   justify-content: center;
   position: relative; }
 
-.testing {
-  width: 71.42857%; }
+/** PHONE SLUG 1 **/
+.phone-slug {
+  background: blue;
+  padding-top: 25px;
+  padding-bottom: 0px; }
 
-.hi {
-  color: red; }
+.phone-slug h6 {
+  font-size: 18px;
+  color: #FFF;
+  line-height: 19px;
+  font-weight: 400;
+  margin-bottom: 4px; }
 
-.test {
-  width: 71.42857%; }
+.phone-slug .new-hotline {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 25px; }
 
-.test-2 {
-  width: 71.42857%; }
+.phone-slug .new-hotline a {
+  color: #FFF; }
 
-.test-3 {
+.device-xs .phone-slug .new-hotline, .device-xxs .phone-slug .new-hotline {
+  margin-bottom: 20px; }
+
+.phone-slug .old-hotline {
+  font-size: 21px;
+  color: #FFF;
+  margin-top: 15px; }
+
+.phone-slug .old-hotline a {
+  color: #FFF;
+  font-weight: 700; }
+
+.phone-slug .col-sm-6.tleft {
+  border-left: 1px solid #FFF; }
+
+.phone-slug .button {
+  margin: 2.5px 0; }
+
+.device-xxs .phone-slug .button {
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%; }
 
-.box {
-  border: 1px solid #000;
-  color: blueasdfadsf; }
+.device-xs .phone-slug h6, .device-xxs .phone-slug h6 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 15px; }
 
-.hi-2 {
-  background: hi; }
+.device-xs .phone-slug .col-sm-6.tright, .device-xxs .phone-slug .col-sm-6.tright {
+  text-align: center !important; }
+
+.device-xs .phone-slug .col-sm-6.tleft, .device-xxs .phone-slug .col-sm-6.tleft {
+  text-align: center !important;
+  border-left: none; }
+
+.device-xs .old-hotline, .device-xxs .old-hotline {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 35px !important; }
+
+body {
+  font-family: "Lato", sans-serif; }
+
+h1 {
+  font-size: 64px; }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 28px; }
+
+h5 {
+  font-size: 24px; }
+
+h6 {
+  font-size: 20px; }
+
+p {
+  font-size: 18px; }
+
+.button {
+  background: orange;
+  padding-top: 2px; }
+
+.content-wrap {
+  padding: 0; }

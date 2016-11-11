@@ -8,7 +8,6 @@
     <meta name="keywords" content="2" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!--build:css css/styles.min.css-->
-    <link href="css/font-icons.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <!--endbuild-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -73,7 +72,7 @@
 
 <!-- Header
 		============================================= -->
-<header id="header" class="split-menu">
+<header id="header" class="page-section full-header">
 
     <div id="header-wrap">
 
@@ -84,59 +83,67 @@
             <!-- Logo
             ============================================= -->
             <div id="logo">
-                <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-                <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+                <a href="#" data-scrollto="#header" class="standard-logo"><img src="images/lyke-logo-reverse.svg" alt="Lyke Logo"></a>
+                <a href="#" data-scrollto="#header" class="retina-logo"><img src="images/lyke-logo-reverse.svg"
+                                                                             alt="Lyke Logo"></a>
             </div><!-- #logo end -->
 
             <!-- Primary Navigation
             ============================================= -->
-            <nav id="primary-menu" class="with-arrows clearfix">
-
+            <nav id="primary-menu">
                 <ul class="navbar">
-                    <li><a href="#"><div>Home</div></a></li>
-                    <li><a href="#"><div>Explore</div></a>
-                        <ul>
-                            <li><a href="#"><div>NextGen Framework</div></a></li>
-                            <li><a href="#"><div>Stunning Graphics</div></a></li>
-                            <li><a href="#"><div>Secured Solutions</div></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><div>Pricing</div></a></li>
+                    <li class="current"><a href="#" data-scrollto="#fall-specials" data-offset="60">
+                        <div class="">New Patient Offers</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#no-insurance" data-offset="60">
+                        <div class="">No Insurance?</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#patient-reviews" data-offset="60">
+                        <div class="">Reviews</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#meet-your-dental-team" data-offset="60">
+                        <div>Team</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="60">
+                        <div>Tour</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#services" data-offset="60">
+                        <div>Services</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="55">
+                        <div>Forms</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#contact" data-offset="60">
+                        <div>Location</div>
+                    </a></li>
                 </ul>
 
-                <ul>
-                    <li><a href="#"><div>FAQs</div></a></li>
-                    <li><a href="#"><div>Gallery</div></a></li>
-                    <li><a href="#"><div>Login</div></a></li>
-                </ul>
-
-                <!-- Primary Menu Mobile ========
-                    ========================= -->
                 <ul class="mobile-primary-menu navbar">
                     <li class="current"><a href="#" data-scrollto="#fall-specials" data-offset="0">
                         <div class="t700">New Patient Offers</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#patient-reviews" data-offset="0">
+                    <li class="current"><a href="#" data-scrollto="#no-insurance" data-offset="0">
+                        <div class="t700">No Insurance?</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#patient-reviews" data-offset="00">
                         <div class="t700">Reviews</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#meet-the-doctors" data-offset="00">
-                        <div class="t700">Doctors</div>
+                    <li class="current"><a href="#" data-scrollto="#meet-your-dental-team" data-offset="0">
+                        <div>Team</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="00">
+                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="0">
                         <div>Tour</div>
                     </a></li>
                     <li class="current"><a href="#" data-scrollto="#services" data-offset="0">
                         <div>Services</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="00">
+                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="0">
                         <div>Forms</div>
                     </a></li>
                     <li class="current"><a href="#" data-scrollto="#contact" data-offset="0">
                         <div>Location</div>
                     </a></li>
                 </ul>
-
-
             
 <!-- Sidebar Trigger =============
                   ========================== -->
@@ -149,7 +156,6 @@
     </div>
 
 </header><!-- #header end -->
-
 
 
 
@@ -194,12 +200,29 @@
 
         <div class="content-wrap">
 
-            <div class="container clearfix">
+            <!-- ============== First Phone Slug
+            ==================================== -->
 
-                <section>
-                    <div class="box">Test</div>
-                </section>
-
+            <div class="phone-slug" id="phone-slug-1">
+                <div class="container">
+                    <div class="row center">
+                        <div class="col-sm-6 tright">
+                            <h6>New Patient Hotline</h6>
+                            <div class="new-hotline"><a href="tel:+12168004202">(216) 800&#8209;4202</a></div>
+                        </div>
+                        <div class="col-sm-6 tleft">
+                            <a class="button" data-toggle="modal" data-target="#contact-modal">REQUEST
+                                APPOINTMENT</a>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col-sm-12">
+                            <p class="old-hotline">Existing patients<span class="hidden-xs"> of our practice</span> call: <br
+                                    class="visible-xs-block"><a
+                                    href="tel:+12162212210">(216) 221&#8209;2210</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -223,7 +246,7 @@
             <div class="container clearfix">
 
                 <div class="col_half">
-                    <span class="copyright">Copyright © 2016 All Rights Reserved by <a class="tyson-link" href="http://www.tysonsteele.com" target="_blank">Tyson&nbsp;Steele&nbsp;Associates.</a></span>
+                    <span class="copyright">Copyright © <script>document.write(+new Date().getFullYear());</script> All Rights Reserved by <a class="tyson-link" href="http://www.tysonsteele.com" target="_blank">Tyson&nbsp;Steele&nbsp;Associates.</a></span>
                 </div>
 
                 <div class="col_half col_last tright">

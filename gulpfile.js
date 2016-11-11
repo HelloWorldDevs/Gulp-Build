@@ -180,6 +180,10 @@ gulp.task('start', function() {
             gulp.src('templates/template-custom.js')
                 .pipe(rename('custom.js'))
                 .pipe(gulp.dest('site/js/'));
+            del.sync('site/scss/main.scss');
+            gulp.src('templates/template-main.scss')
+                .pipe(rename('main.scss'))
+                .pipe(gulp.dest('site/scss'));
             prompt.get(meta_information, function(err, result) {
                 gulp.src('site/index.html')
                     .pipe(inject.after('<meta name="description" content="', result.description))
