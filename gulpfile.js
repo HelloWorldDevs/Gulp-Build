@@ -117,7 +117,7 @@ gulp.task('valid', function () {
         .pipe(htmlhint.reporter());
 });
 
-gulp.task('start', function() {
+gulp.task('start', function() { // Builds out new project. Careful, this will delete current project.
     // New project prompt
     var new_project = {
         properties: {
