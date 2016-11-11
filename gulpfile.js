@@ -146,18 +146,22 @@ gulp.task('start', function() {
     };
 
     // Navbar type, location and side-panel
-    var site_build = {
+    var nav_bar = {
         properties: {
             navbar_location: {
                 message: 'Is the navbar "above" or "below" the slider?',
                 required:true
             },
-            navbar_side_panel: {
-                message: 'Does the navbar have a side panel?',
-                required: true
-            },
             navbar_type: {
                 message: 'Is the navbar "split", "logo-left", or "logo-right"?',
+                required: true
+            }
+        }
+    }
+    var side_panel = {
+        properties: {
+            side_panel: {
+                message: 'Does the navbar have a side panel? "yes" or "No".',
                 required: true
             }
         }
@@ -182,7 +186,7 @@ gulp.task('start', function() {
                     .pipe(inject.after('<meta name="keywords" content="', result.keywords))
                     .pipe(inject.after('<title>', result.title))
                     .pipe(gulp.dest('site'));
-                prompt.get(site_build, function(err, result) {
+                prompt.get(nav_bar, function(err, result) {
                     var logo_left = fs.readFileSync("templates/template-nav-logo-left.html", "utf8");
                     var logo_right = fs.readFileSync('templates/template-nav-logo-right.html', "utf8");
                     var split = fs.readFileSync('templates/template-nav-split.html', "utf8");
@@ -210,7 +214,8 @@ gulp.task('start', function() {
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
                                 .pipe(gulp.dest('site'));
                         }
-                    } else if (result.navbar_location === 'below') {
+                    }
+                    else if (result.navbar_location === 'below') {
                         if (result.navbar_type === 'logo-left') {
                             gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
@@ -235,6 +240,16 @@ gulp.task('start', function() {
                             .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
                             .pipe(gulp.dest('site'));
                     }
+                    prompt .get(side_panel, function(err, result) {
+                        var side_panel = fs.readFileSync('templates/template-side-panel.html', 'utf8');
+                        var side_panel_trigger = fs.readFileSync('templates/template-side-panel-trigger.html', 'utf8');
+                        if (result.side_panel === 'yes') {
+                            gulp.src('site/index.html')
+                                .pipe(inject.after('<body class="stretched">', '\n\n' + side_panel))
+                                .pipe(inject.before('</nav>', '\n' + side_panel_trigger + '\n\n'))
+                                .pipe(gulp.dest('site'));
+                        }
+                    });
                 });
             });
         } else {
