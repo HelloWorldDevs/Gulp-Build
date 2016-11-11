@@ -99,7 +99,8 @@ gulp.task('sprite', function () {
         .pipe(gulp.dest('site/images/sprite'), ('dist/images/sprite'))
         .pipe(gulp.dest('dist/images/sprite')); // Destination for sprite PNG
     var cssStream = spriteData.css
-        .pipe(gulp.dest('site/dependencies/scss')); // Destination for sprite.scss
+        .pipe(gulp.dest('site/scss/dependencies')); // Destination for sprite.scss
+    del.sync('site/images/*.+(png)'); // Deletes remaining png files except sprite
 });
 
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
