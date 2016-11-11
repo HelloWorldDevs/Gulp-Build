@@ -72,7 +72,7 @@
 
 <!-- Header
 		============================================= -->
-<header id="header" class="page-section full-header">
+<header id="header" class="split-menu">
 
     <div id="header-wrap">
 
@@ -83,67 +83,59 @@
             <!-- Logo
             ============================================= -->
             <div id="logo">
-                <a href="#" data-scrollto="#header" class="standard-logo"><img src="images/lyke-logo-reverse.svg" alt="Lyke Logo"></a>
-                <a href="#" data-scrollto="#header" class="retina-logo"><img src="images/lyke-logo-reverse.svg"
-                                                                             alt="Lyke Logo"></a>
+                <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+                <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
             </div><!-- #logo end -->
 
             <!-- Primary Navigation
             ============================================= -->
-            <nav id="primary-menu">
+            <nav id="primary-menu" class="with-arrows clearfix">
+
                 <ul class="navbar">
-                    <li class="current"><a href="#" data-scrollto="#fall-specials" data-offset="60">
-                        <div class="">New Patient Offers</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#no-insurance" data-offset="60">
-                        <div class="">No Insurance?</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#patient-reviews" data-offset="60">
-                        <div class="">Reviews</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#meet-your-dental-team" data-offset="60">
-                        <div>Team</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="60">
-                        <div>Tour</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#services" data-offset="60">
-                        <div>Services</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="55">
-                        <div>Forms</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#contact" data-offset="60">
-                        <div>Location</div>
-                    </a></li>
+                    <li><a href="#"><div>Home</div></a></li>
+                    <li><a href="#"><div>Explore</div></a>
+                        <ul>
+                            <li><a href="#"><div>NextGen Framework</div></a></li>
+                            <li><a href="#"><div>Stunning Graphics</div></a></li>
+                            <li><a href="#"><div>Secured Solutions</div></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><div>Pricing</div></a></li>
                 </ul>
 
+                <ul>
+                    <li><a href="#"><div>FAQs</div></a></li>
+                    <li><a href="#"><div>Gallery</div></a></li>
+                    <li><a href="#"><div>Login</div></a></li>
+                </ul>
+
+                <!-- Primary Menu Mobile ========
+                    ========================= -->
                 <ul class="mobile-primary-menu navbar">
                     <li class="current"><a href="#" data-scrollto="#fall-specials" data-offset="0">
                         <div class="t700">New Patient Offers</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#no-insurance" data-offset="0">
-                        <div class="t700">No Insurance?</div>
-                    </a></li>
-                    <li class="current"><a href="#" data-scrollto="#patient-reviews" data-offset="00">
+                    <li class="current"><a href="#" data-scrollto="#patient-reviews" data-offset="0">
                         <div class="t700">Reviews</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#meet-your-dental-team" data-offset="0">
-                        <div>Team</div>
+                    <li class="current"><a href="#" data-scrollto="#meet-the-doctors" data-offset="00">
+                        <div class="t700">Doctors</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="0">
+                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="00">
                         <div>Tour</div>
                     </a></li>
                     <li class="current"><a href="#" data-scrollto="#services" data-offset="0">
                         <div>Services</div>
                     </a></li>
-                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="0">
+                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="00">
                         <div>Forms</div>
                     </a></li>
                     <li class="current"><a href="#" data-scrollto="#contact" data-offset="0">
                         <div>Location</div>
                     </a></li>
                 </ul>
+
+
             
 <!-- Sidebar Trigger =============
                   ========================== -->
@@ -156,6 +148,7 @@
     </div>
 
 </header><!-- #header end -->
+
 
 
 
@@ -289,10 +282,24 @@
                         <!-- Contact Form Overlay
                         ============================================= -->
                         <div id="contact-form-overlay-mini" class="clearfix">
-                            <div class="contact-rectangle img-wrap center">
+                            <div class="img-wrap center">
                                 <a href="#" data-scrollto="#header" data-offset="0"><img
                                         src="images/masthead-logo.png" alt="Logo"></a>
                             </div>
+                            <div class="center">
+                                <p class="address">53 3rd Street SW<br>Huron, SD 57350</p>
+                                <a class="click-map" target="_blank"
+                                   href="">Click to view map</a></p>
+                                <p class="patient-hotline">New Patient Hotline</p>
+                                <a href="tel:+18887179818"><p class="text-phone-1">(888) 717&#8209;9818</p></a>
+                                <a class="button button-2" data-toggle="modal"
+                                   data-target="#contact-modal">REQUEST APPOINTMENT</a>
+                                <p class="patient-hotline">Existing Patients Call</p>
+                                <a href="tel:+16053523070"><p class="text-phone-2">(605) 352&#8209;3070</p></a>
+                            </div>
+
+
+
 
 
                         </div><!-- Contact Form Overlay End -->
