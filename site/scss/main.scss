@@ -3,10 +3,12 @@
 @import "dependencies/bootstrap.scss";
 @import "dependencies/style.scss";
 @import "dependencies/swiper.scss";
-@import "dependencies/font-icons.scss";
+@import "../css/font-icons";
 @import "dependencies/animate.scss";
 @import "dependencies/responsive.scss";
-@import "sprite.scss";
+@import "dependencies/navbar.scss";
+@import "dependencies/footer.scss";
+
 // End Canvas Dependencies //
 
 
@@ -35,5 +37,5 @@
 }
 
 .hi-2 {
-  background:$sprite-x;
+  background:hi;
 }

@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3174726-4654-4e79-bbc1-620ece85b904" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/template-side-panel-trigger.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/template-side-panel.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/path/to/image/folder/sprite.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/scss/dependencies/footer.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/scss/dependencies/navbar.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/css/font-icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/scss/sprite.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/scss/sprite.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/template-custom.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/index.html" afterPath="$PROJECT_DIR$/site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/scss/main.scss" afterPath="$PROJECT_DIR$/site/scss/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template-index.html" afterPath="$PROJECT_DIR$/templates/template-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template-nav-logo-left.html" afterPath="$PROJECT_DIR$/templates/template-nav-logo-left.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template-nav-logo-right.html" afterPath="$PROJECT_DIR$/templates/template-nav-logo-right.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template-nav-split.html" afterPath="$PROJECT_DIR$/templates/template-nav-split.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template-top-slider.html" afterPath="$PROJECT_DIR$/templates/template-top-slider.html" />
     </list>
     <ignored path="gulp-final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,80 +40,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="248" column="69" selection-start-line="248" selection-start-column="69" selection-end-line="248" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="template-index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/template-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="1172">
+              <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+              <folding>
+                <element signature="e#1477#1483#0" expanded="true" />
+                <element signature="e#1489#1495#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-nav-logo-left.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/template-nav-logo-left.html">
+      <file leaf-file-name="footer.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site/scss/dependencies/footer.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="630">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-top-slider.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/template-top-slider.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template-nav-logo-right.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/template-nav-logo-right.html">
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="101" column="51" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
-              <folding>
-                <element signature="e#1175#1182#0" expanded="true" />
-                <element signature="e#1303#1310#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#7882#7887#0" expanded="true" />
-                <element signature="e#8382#8387#0" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#9058#9063#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -120,7 +87,6 @@
         <option value="$PROJECT_DIR$/dist/js/main.min.js" />
         <option value="$PROJECT_DIR$/site/scss/sprite.css" />
         <option value="$PROJECT_DIR$/site/scss/dependencies/sprite.css" />
-        <option value="$PROJECT_DIR$/site/scss/main.scss" />
         <option value="$PROJECT_DIR$/site/css/main.css" />
         <option value="$PROJECT_DIR$/site/scss/sprite.scss" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -128,16 +94,19 @@
         <option value="$PROJECT_DIR$/site/js/custom.js" />
         <option value="$PROJECT_DIR$/templates/main.scss" />
         <option value="$PROJECT_DIR$/templates/nav.html" />
-        <option value="$PROJECT_DIR$/templates/template-nav-logo-left.html" />
-        <option value="$PROJECT_DIR$/templates/template-nav-split.html" />
-        <option value="$PROJECT_DIR$/templates/template-top-slider.html" />
-        <option value="$PROJECT_DIR$/templates/template-nav-logo-right.html" />
-        <option value="$PROJECT_DIR$/templates/template-index.html" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/templates/template-side-panel.html" />
         <option value="$PROJECT_DIR$/templates/template-side-panel-trigger.html" />
-        <option value="$PROJECT_DIR$/site/index.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/templates/template-nav-split.html" />
+        <option value="$PROJECT_DIR$/templates/template-nav-logo-left.html" />
+        <option value="$PROJECT_DIR$/templates/template-nav-logo-right.html" />
+        <option value="$PROJECT_DIR$/site/scss/dependencies/navbar.scss" />
+        <option value="$PROJECT_DIR$/templates/template-top-slider.html" />
+        <option value="$PROJECT_DIR$/templates/template-index.html" />
+        <option value="$PROJECT_DIR$/site/index.html" />
+        <option value="$PROJECT_DIR$/site/scss/main.scss" />
+        <option value="$PROJECT_DIR$/site/scss/dependencies/footer.scss" />
       </list>
     </option>
   </component>
@@ -152,8 +121,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="75" />
-    <option name="y" value="128" />
+    <option name="x" value="186" />
+    <option name="y" value="65" />
     <option name="width" value="1484" />
     <option name="height" value="873" />
   </component>
@@ -228,6 +197,82 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dependencies" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-final" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -243,12 +288,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../www/Pap/html" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site/css" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/site/scss/dependencies" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -321,15 +367,15 @@
       <workItem from="1478562244067" duration="71000" />
       <workItem from="1478728363555" duration="7063000" />
       <workItem from="1478814042872" duration="719000" />
-      <workItem from="1478832869573" duration="2176000" />
+      <workItem from="1478832869573" duration="5917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43886000" />
+    <option name="totallyTimeSpent" value="47627000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="128" width="1484" height="873" extended-state="0" />
+    <frame x="186" y="65" width="1484" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24460916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -386,27 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -430,13 +455,6 @@
     <entry file="file://$PROJECT_DIR$/site/scss/custom.scss" />
     <entry file="file://$PROJECT_DIR$/site/sprite.png" />
     <entry file="file://$PROJECT_DIR$/site/sprite.css" />
-    <entry file="file://$PROJECT_DIR$/site/scss/dependencies/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/scss/dependencies/sprite.scss" />
     <entry file="file://$PROJECT_DIR$/site/scss/dependencies/responsive.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -489,13 +507,6 @@
     <entry file="file://$PROJECT_DIR$/site/index.html/template-index.html" />
     <entry file="file://$PROJECT_DIR$/site/template-index.html" />
     <entry file="file://$PROJECT_DIR$/templates/custom.js" />
-    <entry file="file://$PROJECT_DIR$/site/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/template-custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -504,14 +515,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/index-2.html/index.html" />
-    <entry file="file://$PROJECT_DIR$/site/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/nav.html" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -543,41 +546,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template-nav-logo-right.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template-nav-split.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3175#3180#0" expanded="true" />
-            <element signature="e#3675#3680#0" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4351#4356#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -586,8 +559,8 @@
         <state relative-caret-position="285">
           <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
           <folding>
-            <element signature="e#611#618#0" expanded="true" />
-            <element signature="e#739#746#0" expanded="true" />
+            <element signature="e#611#618#0" expanded="false" />
+            <element signature="e#739#746#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -600,50 +573,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/template-nav-split.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/template-nav-logo-right.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/template-nav-logo-left.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        <state relative-caret-position="105">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/css/font-icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="1118" column="11" selection-start-line="1118" selection-start-column="1" selection-end-line="1118" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/scss/dependencies/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3209">
+          <caret line="780" column="17" selection-start-line="780" selection-start-column="17" selection-end-line="780" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/scss/dependencies/navbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/template-top-slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="14" column="104" selection-start-line="14" selection-start-column="104" selection-end-line="14" selection-end-column="104" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template-index.html">
+    <entry file="file://$PROJECT_DIR$/site/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="300">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="101" column="51" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#1175#1182#0" expanded="true" />
-            <element signature="e#1303#1310#0" expanded="true" />
+            <element signature="e#1228#1235#0" expanded="true" />
+            <element signature="e#1356#1363#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#7882#7887#0" expanded="true" />
-            <element signature="e#8382#8387#0" expanded="true" />
+            <element signature="e#7186#7191#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7736#7741#0" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#9058#9063#0" expanded="true" />
+            <element signature="e#8473#8478#0" expanded="true" />
+            <element signature="e#9480#9486#0" expanded="true" />
+            <element signature="e#9492#9498#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/templates/template-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="248" column="69" selection-start-line="248" selection-start-column="69" selection-end-line="248" selection-end-column="69" />
+        <state relative-caret-position="1172">
+          <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+          <folding>
+            <element signature="e#1477#1483#0" expanded="true" />
+            <element signature="e#1489#1495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/scss/dependencies/footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

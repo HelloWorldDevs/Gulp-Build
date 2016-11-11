@@ -240,7 +240,7 @@ gulp.task('start', function() {
                             .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
                             .pipe(gulp.dest('site'));
                     }
-                    prompt .get(side_panel, function(err, result) {
+                    prompt.get(side_panel, function(err, result) {
                         var side_panel = fs.readFileSync('templates/template-side-panel.html', 'utf8');
                         var side_panel_trigger = fs.readFileSync('templates/template-side-panel-trigger.html', 'utf8');
                         if (result.side_panel === 'yes') {
