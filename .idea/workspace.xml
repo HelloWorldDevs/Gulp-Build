@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3174726-4654-4e79-bbc1-620ece85b904" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template-main.scss" afterPath="$PROJECT_DIR$/templates/template-main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss" afterPath="$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss" />
     </list>
     <ignored path="gulp-final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,17 +52,27 @@
       <file leaf-file-name="phone-slug.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+            <state relative-caret-position="620">
+              <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-main.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/template-main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="345">
               <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding />
             </state>
@@ -145,8 +156,9 @@
         <option value="$PROJECT_DIR$/templates/template-index.html" />
         <option value="$PROJECT_DIR$/site/scss/dependencies/style.scss" />
         <option value="$PROJECT_DIR$/site/scss/main.scss" />
-        <option value="$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss" />
         <option value="$PROJECT_DIR$/templates/template-main.scss" />
+        <option value="$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -407,12 +419,12 @@
       <workItem from="1478562244067" duration="71000" />
       <workItem from="1478728363555" duration="7063000" />
       <workItem from="1478814042872" duration="719000" />
-      <workItem from="1478832869573" duration="8607000" />
+      <workItem from="1478832869573" duration="8792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50317000" />
+    <option name="totallyTimeSpent" value="50502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="528" y="94" width="1484" height="873" extended-state="0" />
@@ -627,14 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1767,18 +1771,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss">
+    <entry file="file://$PROJECT_DIR$/templates/template-main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        <state relative-caret-position="345">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template-main.scss">
+    <entry file="file://$PROJECT_DIR$/site/scss/dependencies/phone-slug.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="620">
+          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding />
         </state>
       </provider>
