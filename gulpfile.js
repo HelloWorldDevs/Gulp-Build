@@ -30,7 +30,7 @@ gulp.task('browserSync', function() { // Initiate BrowserSync
 });
 
 gulp.task('sass', function(){
-   return gulp.src(config.mainScss)   // Converts main.scss to css file. 
+   return gulp.src(config.mainScss)   // Converts main.scss to css file.
        .pipe(sass())
        .pipe(gulp.dest(config.baseDir + 'css'))
        .pipe(browserSync.reload({
@@ -82,7 +82,7 @@ gulp.task('sprite', function () {
         cssName: 'sprite.css'
     }));
     var imgStream = spriteData.img
-        .pipe(gulp.dest(config.baseDir+'css/'), (config.build+'images/sprite'))
+        .pipe(gulp.dest(config.baseDir+'css/'), (config.build+'css/'))
         .pipe(gulp.dest(config.baseDir+'css/'))
         .pipe(gulp.dest(config.build+'css/'));// Destination for sprite PNG
     var cssStream = spriteData.css
