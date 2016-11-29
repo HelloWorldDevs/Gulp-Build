@@ -1,0 +1,11 @@
+{
+  "snippets": {
+    "scriptTag": "<!-- Scripts -->\n",
+    "cssTag": "<!-- CSS -->\n\t",
+    "index": "test"
+  },
+  "baseDir": "app/",
+  "mainScss": "app/scss/main.scss",
+  "build": "build/"
+
+}
