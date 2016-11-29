@@ -4,7 +4,7 @@
     "cssTag": "<!-- CSS -->\n\t",
     "index": "test"
   },
-  "baseDir": "app/",
+  "baseDir": "site/",
   "mainScss": "app/scss/main.scss",
   "build": "build/"
 

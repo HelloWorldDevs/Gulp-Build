@@ -30,7 +30,7 @@ gulp.task('browserSync', function() { // Initiate BrowserSync
 });
 
 gulp.task('sass', function(){
-   return gulp.src(config.mainScss)   // Converts main.scss to css file. Part of development process.
+   return gulp.src(config.mainScss)   // Converts main.scss to css file. 
        .pipe(sass())
        .pipe(gulp.dest(config.baseDir + 'css'))
        .pipe(browserSync.reload({
@@ -189,25 +189,25 @@ gulp.task('start', function() { // Builds out new project. Careful, this will de
     prompt.start();
     prompt.get(new_project, function (err, result) {
         if(result.name === 'yes') {
-            del.sync('app/index.html');
+            del.sync('site/index.html');
             console.log('\nBuilding new project... \nPlease answer the following questions.');
             gulp.src('templates/template-index.html')
                 .pipe(rename('index.html'))
-                .pipe(gulp.dest('app/'));
-            del.sync('app/js/custom.js');
+                .pipe(gulp.dest('site/'));
+            del.sync('site/js/custom.js');
             gulp.src('templates/template-custom.js')
                 .pipe(rename('custom.js'))
-                .pipe(gulp.dest('app/js/'));
-            del.sync('app/scss/main.scss');
+                .pipe(gulp.dest('site/js/'));
+            del.sync('site/scss/main.scss');
             gulp.src('templates/template-main.scss')
                 .pipe(rename('main.scss'))
-                .pipe(gulp.dest('app/scss'));
+                .pipe(gulp.dest('site/scss'));
             prompt.get(meta_information, function(err, result) {
-                gulp.src('app/index.html')
+                gulp.src('site/index.html')
                     .pipe(inject.after('<meta name="description" content="', result.description))
                     .pipe(inject.after('<meta name="keywords" content="', result.keywords))
                     .pipe(inject.after('<title>', result.title))
-                    .pipe(gulp.dest('app'));
+                    .pipe(gulp.dest('site'));
                 prompt.get(nav_bar, function(err, result) {
                     var logo_left = fs.readFileSync("templates/template-nav-logo-left.html", "utf8");
                     var logo_right = fs.readFileSync('templates/template-nav-logo-right.html', "utf8");
@@ -215,61 +215,61 @@ gulp.task('start', function() { // Builds out new project. Careful, this will de
                     var slider = fs.readFileSync('templates/template-top-slider.html', "utf8");
                     if (result.navbar_location === 'above') {
                         if (result.navbar_type === 'logo-left') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + logo_left))
                                 .pipe(inject.before('<!-- Content -->', slider + '\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         } else if (result.navbar_type === 'logo-right') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + logo_right))
                                 .pipe(inject.before('<!-- Content -->', slider + '\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         } else if (result.navbar_type === 'split') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + split))
                                 .pipe(inject.before('<!-- Content -->', slider + '\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         }
                         else {
                             console.log('Not a valid navbar type. Please insert your own from templates.');
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         }
                     }
                     else if (result.navbar_location === 'below') {
                         if (result.navbar_type === 'logo-left') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
                                 .pipe(inject.before('<!-- Content -->', logo_left + '\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         } else if (result.navbar_type === 'logo-right') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
                                 .pipe(inject.before('<!-- Content -->', logo_right + '\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         } else if (result.navbar_type === 'split') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
                                 .pipe(inject.before('<!-- Content -->', split +'\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         } else {
                             console.log('Not a valid navbar type. Please insert your own from templates.');
                         }
                     } else {
                         console.log('You didn\'t type in a valid navbar type. Please insert your own from templates');
-                        gulp.src('app/index.html')
+                        gulp.src('site/index.html')
                             .pipe(inject.after('<div id="wrapper" class="clearfix">', '\n\n' + slider))
-                            .pipe(gulp.dest('app'));
+                            .pipe(gulp.dest('site'));
                     }
                     prompt.get(side_panel, function(err, result) {
                         var side_panel = fs.readFileSync('templates/template-side-panel.html', 'utf8');
                         var side_panel_trigger = fs.readFileSync('templates/template-side-panel-trigger.html', 'utf8');
                         if (result.side_panel === 'yes') {
-                            gulp.src('app/index.html')
+                            gulp.src('site/index.html')
                                 .pipe(inject.after('<body class="stretched">', '\n\n' + side_panel))
                                 .pipe(inject.before('</nav>', '\n' + side_panel_trigger + '\n\n'))
-                                .pipe(gulp.dest('app'));
+                                .pipe(gulp.dest('site'));
                         }
                     });
                 });
