@@ -25748,23 +25748,44 @@ Copyright (c) 2014 Daniel Eden
   #logo a.retina-logo {
     display: inline-block; } }
 
-.navbar li > a {
-  color: gray; }
-
-.navbar > li:nth-child(1) > a {
+#primary-menu > ul > li a {
+  color: black;
   font-weight: 700;
-  color: blue; }
+  font-size: 18px; }
+  @media (max-width: 1200px) {
+    #primary-menu > ul > li a {
+      font-size: 16px;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
-.navbar > li:nth-child(2) > a {
-  font-weight: 700;
+#primary-menu > ul > li .nav-1 {
   color: red; }
 
-.navbar > li:nth-child(3) > a {
-  font-weight: 700;
+#primary-menu > ul > li .nav-2 {
+  color: blue; }
+
+#primary-menu > ul > li .nav-3 {
   color: green; }
 
+#primary-menu > ul > li .nav-1, #primary-menu > ul > li .nav-2, #primary-menu > ul > li .nav-3 {
+  font-weight: 700; }
+
+#header.full-header #logo {
+  margin-right: 15px;
+  padding-right: 0; }
+
 #header.sticky-header:not(.static-sticky), #header.sticky-header:not(.static-sticky) #header-wrap, #header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
-  height: 60px; }
+  height: 100px; }
+
+#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
+  padding-top: 38px;
+  padding-bottom: 38px; }
+
+#primary-menu-trigger {
+  font-size: 25px; }
+
+#logo img {
+  padding: 2.5px 0; }
 
 #copyrights {
   background: grey; }
@@ -25807,65 +25828,38 @@ a.social-icon.si-colored {
   position: relative; }
 
 /** PHONE SLUG **/
-.phone-slug {
+.phone-slug-1 {
   background: blue;
-  padding-top: 25px;
-  padding-bottom: 0px; }
-
-.phone-slug h6 {
-  font-size: 18px;
-  color: #FFF;
-  line-height: 19px;
-  font-weight: 400;
-  margin-bottom: 4px; }
-
-.phone-slug .new-hotline {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 25px; }
-
-.phone-slug .new-hotline a {
-  color: #FFF; }
-
-.device-xs .phone-slug .new-hotline, .device-xxs .phone-slug .new-hotline {
-  margin-bottom: 20px; }
-
-.phone-slug .old-hotline {
-  font-size: 21px;
-  color: #FFF;
-  margin-top: 15px; }
-
-.phone-slug .old-hotline a {
-  color: #FFF;
-  font-weight: 700; }
-
-.phone-slug .col-sm-6.tleft {
-  border-left: 1px solid #FFF; }
-
-.phone-slug .button {
-  margin: 2.5px 0; }
-
-.device-xxs .phone-slug .button {
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%; }
-
-.device-xs .phone-slug h6, .device-xxs .phone-slug h6 {
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 15px; }
-
-.device-xs .phone-slug .col-sm-6.tright, .device-xxs .phone-slug .col-sm-6.tright {
-  text-align: center !important; }
-
-.device-xs .phone-slug .col-sm-6.tleft, .device-xxs .phone-slug .col-sm-6.tleft {
-  text-align: center !important;
-  border-left: none; }
-
-.device-xs .old-hotline, .device-xxs .old-hotline {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 35px !important; }
+  padding: 20px 0; }
+  .phone-slug-1 a:hover {
+    text-decoration: none; }
+  .phone-slug-1 .col-1 {
+    text-align: right;
+    padding-right: 20px; }
+    @media (max-width: 767px) {
+      .phone-slug-1 .col-1 {
+        padding: 0;
+        text-align: center; } }
+  .phone-slug-1 .col-2 {
+    text-align: left;
+    border-left: 2px solid #000;
+    padding-left: 20px; }
+    @media (max-width: 767px) {
+      .phone-slug-1 .col-2 {
+        border-left: none;
+        text-align: center;
+        padding: 0; } }
+  .phone-slug-1 .new-text {
+    color: red;
+    margin-bottom: 0; }
+  .phone-slug-1 .new-hotline {
+    color: white; }
+  .phone-slug-1 .old-text {
+    color: green;
+    margin-bottom: 0; }
+  .phone-slug-1 .old-hotline {
+    color: white;
+    font-weight: 700; }
 
 /** Contact Modal **/
 .form-error {
@@ -25907,13 +25901,6 @@ h4.modal-title {
   padding-bottom: 20px;
   background: gray;
   background-size: cover; }
-
-.section-specials h2 {
-  margin-bottom: 0;
-  font-size: 48px;
-  color: #674C12;
-  font-weight: 700;
-  line-height: 50px !important; }
 
 .specials-1 {
   background: #E59908;
@@ -26025,9 +26012,6 @@ h4.modal-title {
   margin: 0 auto;
   margin-bottom: 50px; }
 
-.device-xxs .section-specials h2 {
-  font-size: 44px; }
-
 .section-specials .col-xs-12 p {
   color: #CCA75D;
   font-size: 32px;
@@ -26116,8 +26100,12 @@ h4.modal-title {
   height: 100%;
   border-bottom: 5px solid #FFF; }
 
+#slider, .swiper-container, .swiper-wrapper, .swiper-slide {
+  max-height: 800px; }
+
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  font-size: 16px; }
 
 h1 {
   font-size: 64px; }
@@ -26149,3 +26137,14 @@ p {
 
 .content-wrap {
   padding: 0; }
+
+section h2 {
+  font-size: 48px; }
+  @media (max-width: 767px) {
+    section h2 {
+      font-size: 40px;
+      line-height: 50px; } }
+  @media (max-width: 480px) {
+    section h2 {
+      font-size: 32px;
+      line-height: 36px; } }

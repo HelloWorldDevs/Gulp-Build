@@ -5,7 +5,7 @@
     "index": "test"
   },
   "baseDir": "site/",
-  "mainScss": "app/scss/main.scss",
+  "mainScss": "site/scss/main.scss",
   "build": "build/"
 
 }

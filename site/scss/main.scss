@@ -1,3 +1,9 @@
+$primary-font: 'Lato', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+$third-font: 'Roboto Condensed', sans-serif;
+$button-color: orange;
+$button-hover:gray;
+
 // Canvas Dependencies //
 
 @import "dependencies/bootstrap.scss";
@@ -12,6 +18,7 @@
 @import "dependencies/contact-modal.scss";
 @import "dependencies/specials.scss";
 @import "dependencies/location-section.scss";
+@import "dependencies/slides.scss";
 
 
 // End Canvas Dependencies //
@@ -19,16 +26,13 @@
 
 // Variables to define first //
 
-$primary-font: 'Lato', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
-$third-font: 'Roboto Condensed', sans-serif;
-$button-color: orange;
-$button-hover:gray;
+
 
 // CSS //
 
 body {
   font-family:$primary-font;
+  font-size:16px;
 }
 
 h1 {
@@ -68,4 +72,17 @@ p {
 }
 .content-wrap {
   padding:0;
+}
+
+section h2 {
+  font-size:48px;
+  @media (max-width:767px) {
+    font-size:40px;
+    line-height:50px;
+
+  }
+  @media (max-width:480px) {
+    font-size:32px;
+    line-height:36px;
+  }
 }

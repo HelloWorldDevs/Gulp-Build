@@ -9,7 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!--build:css css/styles.min.css-->
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/sprite.css" rel="stylesheet"><link href="css/sprite.css" rel="stylesheet"><link href="css/sprite.css" rel="stylesheet"><link href="css/sprite.css" rel="stylesheet"><link href="css/sprite.css" rel="stylesheet"><!--endbuild-->
+    <!--endbuild-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
@@ -21,7 +21,7 @@
 
 <!-- Header
 		============================================= -->
-<header id="header" class="split-menu">
+<header id="header" class="page-section full-header">
 
     <div id="header-wrap">
 
@@ -32,33 +32,67 @@
             <!-- Logo
             ============================================= -->
             <div id="logo">
-                <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-                <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+                <a href="#" data-scrollto="#header" class="standard-logo"><img src="images/logo.svg" alt="Logo"></a>
+                <a href="#" data-scrollto="#header" class="retina-logo"><img src="images/logo.svg"
+                                                                             alt="Logo"></a>
             </div><!-- #logo end -->
 
             <!-- Primary Navigation
             ============================================= -->
-            <nav id="primary-menu" class="with-arrows clearfix">
-
+            <nav id="primary-menu">
                 <ul class="navbar">
-                    <li><a href="#"><div>Home</div></a></li>
-                    <li><a href="#"><div>Explore</div></a>
-                        <ul>
-                            <li><a href="#"><div>NextGen Framework</div></a></li>
-                            <li><a href="#"><div>Stunning Graphics</div></a></li>
-                            <li><a href="#"><div>Secured Solutions</div></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><div>Pricing</div></a></li>
+                    <li class="current"><a class="nav-1" href="#" data-scrollto="#fall-specials" data-offset="60">
+                        <div class="">New Patient Offers</div>
+                    </a></li>
+                    <li class="current"><a class="nav-2" href="#" data-scrollto="#no-insurance" data-offset="60">
+                        <div class="">No Insurance?</div>
+                    </a></li>
+                    <li class="current"><a class="nav-3" href="#" data-scrollto="#patient-reviews" data-offset="60">
+                        <div class="">Reviews</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#meet-your-dental-team" data-offset="60">
+                        <div>Team</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="60">
+                        <div>Tour</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#services" data-offset="60">
+                        <div>Services</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="55">
+                        <div>Forms</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#contact" data-offset="60">
+                        <div>Location</div>
+                    </a></li>
                 </ul>
 
-                <ul>
-                    <li><a href="#"><div>FAQs</div></a></li>
-                    <li><a href="#"><div>Gallery</div></a></li>
-                    <li><a href="#"><div>Login</div></a></li>
+                <ul class="mobile-primary-menu navbar">
+                    <li class="current"><a class="nav-1" href="#" data-scrollto="#fall-specials" data-offset="0">
+                        <div>New Patient Offers</div>
+                    </a></li>
+                    <li class="current"><a class="nav-2" href="#" data-scrollto="#no-insurance" data-offset="0">
+                        <div>No Insurance?</div>
+                    </a></li>
+                    <li class="current"><a class="nav-3" href="#" data-scrollto="#patient-reviews" data-offset="0">
+                        <div>Reviews</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#meet-your-dental-team" data-offset="0">
+                        <div>Team</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#office-tour" data-offset="0">
+                        <div>Tour</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#services" data-offset="0">
+                        <div>Services</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#patient-forms" data-offset="0">
+                        <div>Forms</div>
+                    </a></li>
+                    <li class="current"><a href="#" data-scrollto="#contact" data-offset="0">
+                        <div>Location</div>
+                    </a></li>
                 </ul>
-
-
             </nav><!-- #primary-menu end -->
 
         </div>
@@ -66,7 +100,6 @@
     </div>
 
 </header><!-- #header end -->
-
 
 
 
@@ -86,13 +119,13 @@
                 </div>
                 <div class="swiper-slide" id="slide-2" style="background-image:url('images/slide2.jpg');">
                     <div class="container clearfix">
-                        <div class="slider-caption slider-caption-right">
+                        <div class="slider-caption slider-caption-left">
                             <h2 data-caption-animate="fadeInUp">Beautifully Flexible</h2>
                             <p data-caption-animate="fadeInUp" data-caption-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" id="slide-3" style="background-image: url('images/slide3.jpg;">
+                <div class="swiper-slide" id="slide-3" style="background-image: url('images/slide3.jpg');">
                     <div class="container clearfix">
                         <div class="slider-caption slider-caption-left">
                             <h2 data-caption-animate="fadeInUp" data-caption-delay="200">Welcome to Canvas</h2>
@@ -114,27 +147,27 @@
             <!-- ============== First Phone Slug
             ==================================== -->
 
-            <section class="phone-slug" id="phone-slug-1">
+            <div class="phone-slug-1">
                 <div class="container">
                     <div class="row center">
-                        <div class="col-sm-6 tright">
-                            <h6>New Patient Hotline</h6>
-                            <div class="new-hotline"><a href="tel:+12168004202">(216) 800&#8209;4202</a></div>
+                        <div class="col-sm-6 col-1">
+                            <h6 class="new-text">New Patient Hotline</h6>
+                            <div><a class="new-hotline" href="tel:+12168004202">(216) 800&#8209;4202</a></div>
                         </div>
-                        <div class="col-sm-6 tleft">
+                        <div class="col-sm-6 col-2">
                             <a class="button" data-toggle="modal" data-target="#contact-modal">REQUEST
                                 APPOINTMENT</a>
                         </div>
                     </div>
                     <div class="row center">
                         <div class="col-sm-12">
-                            <p class="old-hotline">Existing patients<span class="hidden-xs"> of our practice</span> call: <br
-                                    class="visible-xs-block"><a
+                            <p class="old-text">Existing patients<span class="hidden-xs"> of our practice</span> call: <br
+                                    class="visible-xs-block"><a class="old-hotline"
                                     href="tel:+12162212210">(216) 221&#8209;2210</a></p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
             <!---- Fall Specials Section ----->
             <section id="specials" class="section-specials">
