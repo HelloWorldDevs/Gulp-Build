@@ -61,23 +61,24 @@ h6 {
 
 p {
   font-size:18px;
+  display:flex;
 }
 
 .button {
   background:$button-color;
   padding-top:2px;
-  display :flex;
 }
 .button:hover {
   background:$button-hover;
-  display:flex;
 }
 .content-wrap {
+  display:flex;
   padding:0;
 }
 
 section h2 {
   font-size:48px;
+  display:flex;
   @media (max-width:767px) {
     font-size:40px;
     line-height:50px;
