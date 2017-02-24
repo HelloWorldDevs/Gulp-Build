@@ -51,12 +51,12 @@ gulp.task('useref', function() {                // Useref is used for concatinat
         .pipe(gulp.dest(config.build));
 });
 
-gulp.task('images', function() {        // Compresses all images except for PNGs. This happens in sprite task.
-    gulp.src(config.baseDir + 'images/**/*.+(jpeg|jpg|gif|svg)')
+gulp.task('images', function() {        // Compresses all images.
+    gulp.src(config.baseDir + 'images/**/*.+(jpeg|jpg|gif|svg|png)')
         .pipe(cache(imagemin({          // Caching checks if already compressed. If so, skips image.
             interlaced: true
         })))
-        .pipe(gulp.dest(config.build + '/images'));    // Moves all images to distribution except PNGs. This happens in sprite task
+        .pipe(gulp.dest(config.build + '/images'));    // Moves all images to distribution.
 });
 
 gulp.task('fonts', function() { // Moves all font files over to dist
@@ -68,37 +68,47 @@ gulp.task('fonts', function() { // Moves all font files over to dist
 
 
 
-gulp.task('sprite', function () {
-    gulp.src(config.baseDir+'images/*.+(png)')      // Compress all PNG files.
-        .pipe(cache(imagemin({
-            interlaced: true
-        })))
-        .pipe(gulp.dest(config.baseDir+'images'));
+// gulp.task('sprite', function () {
+//     del.sync(config.baseDir + 'css/sprite.css');
+//     del.sync(config.baseDir + 'images/sprite.png');
+//
+//     // Generate our spritesheet for png files
+//     var spriteData = gulp.src(config.baseDir+'images/sprite/*.png').pipe(spritesmith({
+//         imgName: 'sprite.png',
+//         cssName: 'sprite.css'
+//     }));
+//     var imgStream = spriteData.img
+//         .pipe(gulp.dest(config.baseDir+'images/'), (config.build+'css/'))
+//         .pipe(gulp.dest(config.baseDir+'images/'))
+//         .pipe(gulp.dest(config.build+'images/'));// Destination for sprite PNG
+//     var cssStream = spriteData.css
+//         .pipe(gulp.dest(config.baseDir+'css/')); // Destination for sprite.scss
+//     gulp.src(config.baseDir+'index.html')
+//         .pipe(inject.before('<!--endbuild-->', '<link href="css/sprite.css" rel="stylesheet">'))
+//         .pipe(gulp.dest(config.baseDir));
+// });
 
+gulp.task('autoprefixer', function () {
+    var postcss      = require('gulp-postcss');
+    var sourcemaps   = require('gulp-sourcemaps');
+    var autoprefixer = require('autoprefixer');
 
-    // Generate our spritesheet for png files
-    var spriteData = gulp.src(config.baseDir+'images/*.png').pipe(spritesmith({
-        imgName: 'sprite.png',
-        cssName: 'sprite.css'
-    }));
-    var imgStream = spriteData.img
-        .pipe(gulp.dest(config.baseDir+'css/'), (config.build+'css/'))
-        .pipe(gulp.dest(config.baseDir+'css/'))
-        .pipe(gulp.dest(config.build+'css/'));// Destination for sprite PNG
-    var cssStream = spriteData.css
-        .pipe(gulp.dest(config.baseDir+'css/')); // Destination for sprite.scss
-    gulp.src(config.baseDir+'index.html')
-        .pipe(inject.before('<!--endbuild-->', '<link href="css/sprite.css" rel="stylesheet">'))
-        .pipe(gulp.dest(config.baseDir));
+    return gulp.src(config.baseDir + 'css/main.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(config.baseDir + 'css/'));
 });
 
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
-    gulp.watch(config.baseDir+'/scss/**/*.+(scss|sass)', ['sass']);
-    gulp.watch(config.baseDir+'images/**/*.+(jpg|gif|svg|jpeg)', ['images']);
+    gulp.watch(config.baseDir+'/scss/**/*.+(scss|sass)', function() {runSequence('sass', 'autoprefixer')});
     gulp.watch(config.baseDir+'*.html', browserSync.reload);
     gulp.watch(config.baseDir+'js/**/*.js', browserSync.reload);
+    // gulp.watch(config.baseDir+'images/**/*.+(jpg|gif|svg|jpeg|png)', ['images']);
     gulp.watch(config.baseDir+'images/*.png', ['sprite']);
 });
+
+
 
 gulp.task('valid', function () {
     gulp.src(config.baseDir+'index.html')
@@ -108,7 +118,7 @@ gulp.task('valid', function () {
 
 
 gulp.task('build', function (callback) {
-    runSequence('clean:dist', 'sprite', 'sass', ['valid', 'useref', 'images', 'fonts'],
+    runSequence('clean:dist', 'sprite', 'sass', 'autoprefixer', ['valid', 'useref', 'images', 'fonts'],
         callback
     );
 });

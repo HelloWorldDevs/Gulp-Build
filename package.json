@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.7.5",
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
     "fs": "0.0.1-security",
@@ -19,12 +20,15 @@
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-inject-string": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
     "gulp.spritesmith": "^6.2.1",
     "merge-stream": "^1.0.0",
+    "postcss": "^5.2.15",
     "prompt": "^1.0.0",
     "run-sequence": "^1.2.2"
   },
