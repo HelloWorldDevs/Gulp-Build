@@ -112,6 +112,7 @@ gulp.task('lint', function() {
 gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both browsersync and sass concurrently
     gulp.watch(config.baseDir+'/scss/**/*.+(scss|sass)', ['sass-prefix']);
     gulp.watch(config.baseDir+'*.html', browserSync.reload);
+    gulp.watch(config.baseDir+'js/custom.js', ['lint']);
     gulp.watch(config.baseDir+'js/**/*.js', browserSync.reload);
     // gulp.watch(config.baseDir+'images/**/*.+(jpg|gif|svg|jpeg|png)', ['images']);
     gulp.watch(config.baseDir+'images/*.png', ['sprite']);
