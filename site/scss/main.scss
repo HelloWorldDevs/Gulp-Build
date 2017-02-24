@@ -66,9 +66,11 @@ p {
 .button {
   background:$button-color;
   padding-top:2px;
+  display :flex;
 }
 .button:hover {
-  background:$button-hover
+  background:$button-hover;
+  display:flex;
 }
 .content-wrap {
   padding:0;
