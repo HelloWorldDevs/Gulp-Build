@@ -128,13 +128,13 @@ gulp.task('valid', function () {
 
 
 gulp.task('build', function (callback) {
-    runSequence('clean:dist', 'sass-prefix', ['valid', 'lint', 'useref', 'images', 'fonts'], //If want spriting, must add in task 'sprite'.
+    runSequence('clean:dist', 'sass-prefix', ['valid', 'lint', 'useref', 'images', 'fonts'], // If want spriting, must add in task 'sprite'.
         callback
     );
 });
 
 gulp.task('default', function (callback) {
-    runSequence(['sass', 'valid', 'browserSync', 'watch'],
+    runSequence(['sass-prefix', 'valid', 'browserSync', 'watch'],
         callback
     );
 });

@@ -4,7 +4,6 @@
     <list default="true" id="b3174726-4654-4e79-bbc1-620ece85b904" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/css/main.css" afterPath="$PROJECT_DIR$/site/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/index.html" afterPath="$PROJECT_DIR$/site/index.html" />
     </list>
     <ignored path="gulp-final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="114" column="52" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
+            <state relative-caret-position="540">
+              <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -55,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
+            <state relative-caret-position="660">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,8 +147,8 @@
         <option value="$PROJECT_DIR$/site/css/main.css" />
         <option value="$PROJECT_DIR$/site/scss/main.scss" />
         <option value="$PROJECT_DIR$/site/index.html" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/site/js/custom.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -456,7 +455,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61815000" />
+    <option name="totallyTimeSpent" value="61891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="96" y="23" width="1484" height="873" extended-state="0" />
@@ -736,6 +735,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/site/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -746,16 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="114" column="52" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
+        <state relative-caret-position="540">
+          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
           <folding />
         </state>
       </provider>
