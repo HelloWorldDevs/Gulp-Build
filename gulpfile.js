@@ -17,8 +17,9 @@ const gulp = require('gulp'),
       prompt = require('prompt'),
       fs = require('fs'),
       config = require('./config.json'),
-      jshint = require('gulp-jshint');
-
+      jshint = require('gulp-jshint'),
+      svgmin = require('gulp-svgmin'),
+      svgstore = require('gulp-svgstore');
 
 
 /******* Tasks **********/
@@ -28,6 +29,14 @@ gulp.task('browserSync', function() { // Initiate BrowserSync
          baseDir: config.baseDir
       },
    })
+});
+
+gulp.task('svg-icon-generator', function() {
+    return gulp.src(config.baseDir + '/images/svg/**/*.svg')
+     .pipe(svgmin())
+     .pipe(svgstore())
+     .pipe(rename('icons.svg'))
+     .pipe(gulp.dest(config.baseDir + 'images/assets'));
 });
 
 gulp.task('sass', function(){
@@ -51,7 +60,7 @@ gulp.task('autoprefixer', function () {
         .pipe(gulp.dest(config.baseDir + 'css/'));
 });
 
-gulp.task('sass-prefix', function() {runSequence('sass', 'autoprefixer')});
+gulp.task('sass-prefix', function() {runSequence('sass', 'autoprefixer')}); //
 
 gulp.task('useref', function() {                // Useref is used for concatinating between two snippets in index.html file.
     return gulp.src(config.baseDir + 'index.html')
@@ -81,7 +90,7 @@ gulp.task('fonts', function() { // Moves all font files over to dist
         .pipe(gulp.dest(config.build+'css/fonts'));
 });
 
-gulp.task('lint', function() {
+gulp.task('lint', function() { // JS Linter
     return gulp.src(config.baseDir + 'js/custom.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default', { verbose: true }));
@@ -120,7 +129,7 @@ gulp.task('watch', ['sass', 'browserSync'], function(){           // Runs both b
 
 
 
-gulp.task('valid', function () {
+gulp.task('valid', function () { // HTML linter
     gulp.src(config.baseDir+'index.html')
         .pipe(htmlhint())
         .pipe(htmlhint.reporter('htmlhint-stylish'));
@@ -134,7 +143,7 @@ gulp.task('build', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-    runSequence(['sass-prefix', 'valid', 'browserSync', 'watch'],
+    runSequence(['sass-prefix', 'valid', 'lint', 'browserSync', 'watch'],
         callback
     );
 });
